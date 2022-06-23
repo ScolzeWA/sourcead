@@ -2,6 +2,7 @@ import asyncio
 from config import BOT_USERNAME, SUDO_USERS
 from NIXA.decorators import authorized_users_only, sudo_users_only, errors
 from NIXA.filters import command, other_filters
+from NIXA.filters import command2, other_filters
 from NIXA.main import user as USER
 from pyrogram import filters
 from NIXA.main import bot as Client
@@ -9,7 +10,7 @@ from pyrogram.errors import UserAlreadyParticipant
 
 
 @Client.on_message(
-    command(["userbotjoin"]) & ~filters.private & ~filters.bot
+    command2(["المساعد","انضم"]) & ~filters.private & ~filters.bot
 )
 @authorized_users_only
 @errors
@@ -35,7 +36,7 @@ async def join_group(client, message):
     except Exception as e:
         print(e)
         await message.reply_text(
-            f"🛑 تعذر الدخول 🛑 \n\n**اكتب تشغيل. لكي ينضم**"
+            f"🛑 تعذر الدخول 🛑 \n\n**اكتب تشغيل لكي ينضم**"
             "\n\n**او تفقد ان الحساب المساعد غير مقيد**",
         )
         return
@@ -44,7 +45,7 @@ async def join_group(client, message):
     )
 
 
-@Client.on_message(command(["leave","leave@{BOT_USERNAME}"]) & filters.group & ~filters.edited)
+@Client.on_message(command2(["غادر"]) & filters.group & ~filters.edited)
 @authorized_users_only
 async def leave_one(client, message):
     try:
@@ -58,7 +59,7 @@ async def leave_one(client, message):
         return
 
 
-@Client.on_message(command(["leaveall", f"leaveall@{BOT_USERNAME}"]))
+@Client.on_message(command2(["غادر الكل"]))
 @sudo_users_only
 async def leave_all(client, message):
     if message.from_user.id not in SUDO_USERS:

@@ -13,7 +13,7 @@ import ffmpeg
 import requests
 from NIXA.fonts import CHAT_TITLE
 from PIL import Image, ImageDraw, ImageFont
-from config import ASSISTANT_NAME, BOT_USERNAME, IMG_1, IMG_2, IMG_5, UPDATES_CHANNEL, GROUP_SUPPORT
+from config import ASSISTANT_NAME, BOT_USERNAME, IMG_1, IMG_2, IMG_5, UPDATES_CHANNEL, GROUP_SUPPORT, START_PIC
 from NIXA.filters import command2, other_filters
 from NIXA.queues import QUEUE, add_to_queue
 from NIXA.main import call_py, Test as user
@@ -248,8 +248,8 @@ async def play(c: Client, m: Message):
     else:
         if len(m.command) < 2:
          await m.reply_photo(
-                     photo=f"{IMG_5}",
-                    caption="💬**اكتب: /شغل  او تشغيل بل رد على ملف صوتي**"
+                     photo=f"{START_PIC}",
+                    caption="💬**اكتب: شغل  او تشغيل بل رد على ملف صوتي**"
                     ,
                       reply_markup=InlineKeyboardMarkup(
                     [
