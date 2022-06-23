@@ -49,6 +49,11 @@
             "required": true,
             "value": "540000"
         },
+        "START_PIC": {
+            "description": "لينك صوره البوت",
+            "required": true,
+            "value": "https://telegra.ph/file/a6c96cdbd066ca2388d06.jpg"
+        },
         "BOT_TOKEN": {
             "description": "fill with your bot token get from @BotFather on telegram",
             "required": true,
