@@ -1,5 +1,6 @@
 from NIXA.main import bot
 from pyrogram import filters
+from NIXA.filters import command2, other_filters
 
 
 @bot.on_message(filters.command2('ايدي","الايدي'))
