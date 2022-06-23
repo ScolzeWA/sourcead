@@ -56,7 +56,7 @@ async def start_(client: Client, message: Message):
                 ],
                 [
                     InlineKeyboardButton(
-                        "🖥 ¦ الأوامــر", url=f"https://telegra.ph/%D8%B3%D9%88%D8%B1%D8%B3-%D9%83%D9%88%D8%A8%D8%B1%D8%A7-%D8%A7%D9%84%D8%A7%D9%81%D8%B6%D9%84-06-23"
+                        "🖥 ¦ الأوامــر", url=f"https://telegra.ph/%F0%9D%91%BE%F0%9D%91%B6%F0%9D%91%B9%F0%9D%91%B3%F0%9D%91%AB-%F0%9D%91%B4%F0%9D%91%BC%F0%9D%91%BA%F0%9D%91%B0%F0%9D%91%AA-%CB%A3-06-23"
                     ),
                     InlineKeyboardButton(
                         "المطور", url="https://t.me/WORLD_MUSIC_F"
