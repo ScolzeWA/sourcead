@@ -220,7 +220,7 @@ def time_to_seconds(times):
 
 
 @Client.on_message(
-    command(["ابحث", f"vsong@{bn}", "video", f"video@{bn}"]) & ~filters.edited
+    command2(["حمل_فيديو","تحميل_فيديو","حمل_فيد","تحميل_فيد"]) & ~filters.edited
 )
 async def vsong(client, message):
     ydl_opts = {
@@ -268,7 +268,7 @@ async def vsong(client, message):
         print(e)
 
 
-@Client.on_message(command(["كلمات", f"lyric@{bn}"]))
+@Client.on_message(command2(["كلمات"]))
 async def lyrics(_, message):
     try:
         if len(message.command) < 2:
