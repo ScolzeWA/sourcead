@@ -40,7 +40,7 @@ async def join_group(client, message):
         )
         return
     await message.reply_text(
-        f"انا جيت اهو يارب مكونش اتٲخرت"",
+        f"انا جيت اهو يارب مكونش اتٲخرت",
     )
 
 
