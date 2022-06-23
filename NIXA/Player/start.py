@@ -75,33 +75,6 @@ async def start_(client: Client, message: Message):
         ),
     )
     
-    
-@Client.on_message(commandpro(["/start""]) & filters.group & ~filters.edited)
-async def start(client: Client, message: Message):
-    await message.reply_photo(
-        photo=f"https://telegra.ph/file/a6c96cdbd066ca2388d06.jpg",
-        caption=f"""**━━━━━━━━━━━━
-اهـلا يـبـنـي.؟ {message.from_user.mention()} !
-مـرحبآ بـك انــا بــوت اقـوم بــتـشـغـيـل الاغــانــي فـي الـمـڪـالـمـه الـصـوتـية .🤔❤؟
-يمكنني التشغيل بصوت رائع وبدون اي مشاكل او تقطيع في الاغنيه
- +اضفني الى مجموعتك وارفعني رول بشڪل مع ڪامل الصلاحيات
- البوت يشتغل بالاوامر عربي وانجليزي
- لانضمام الحساب المساعد لتشغيل البوت اكتب انضم
-
-
-  لمعرفة استخدامي بشڪل صحيح اضغط علي زر الاوامر. 🤔𝑫𝑬𝑽 [𝑾𝑶𝑹𝑳𝑫 𝑴𝑼𝑺𝑰𝑪 💗ˣ](t.me/WORLD_MUSIC_F)
-━━━━━━━━━━━━━━━━━━**""",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "🥇 قناة السورس 🥇", url=f"https://t.me/Ch_World_Music")
-                ]
-            ]
-        ),
-    )
-
-
 @Client.on_message(command(["source"]) & filters.group & ~filters.edited)
 async def start(client: Client, message: Message):
     await message.delete()
